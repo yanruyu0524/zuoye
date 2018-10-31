@@ -13,11 +13,35 @@ body,
 .wrap {
     @include box_flex;
     @include direction(column);
+    overflow: hidden;
 }
 
 header {
-    @include num(100%, pxTorem(44px));
-    #{$bg}: pink
+    @include num(100%, pxTorem(88px));
+    #{$bg}: pink;
+    .top {
+        width: 100%;
+        height: pxTorem(44px);
+        text-align: center;
+        line-height: pxTorem(45px);
+        span {
+            font-size: pxTorem(15px);
+            margin: 0 auto;
+            color: red;
+        }
+    }
+    .nav {
+        width: 1000px;
+        display: flex;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        li {
+            width: 100px;
+            height: 100%;
+            text-align: center;
+            flex-shrink: 0;
+        }
+    }
 }
 
 section {
@@ -37,5 +61,27 @@ section {
 
 footer {
     @include num(100%, pxTorem(44px));
-    #{$bg}: pink
+    #{$bg}: pink;
+    display: flex;
+    text-align: center;
+    dl {
+        dt {
+            margin: pxTorem(5px) 0;
+            i.iconfont {
+                font-size: pxTorem(15px);
+            }
+        }
+        width: 20%;
+        height: 100%;
+    }
+    .active {
+        dt {
+            i.iconfont {
+                color: red;
+            }
+        }
+        dd {
+            color: red;
+        }
+    }
 }
