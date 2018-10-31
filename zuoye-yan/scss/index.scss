@@ -1,0 +1,77 @@
+@import "common.scss";
+@import "mixin.scss";
+* {
+    @include sizing;
+}
+
+html,
+body,
+.wrap {
+    @include num(100%, 100%);
+}
+
+.wrap {
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    @include num(100%, pxTorem(44px));
+    #{$bg}: pink
+}
+
+section {
+    @include flex;
+    #{$bg}: skyblue;
+    .content {
+        @include box_flex;
+        @include direction(column);
+        h2 {
+            height: pxTorem(30px);
+            font-size: pxTorem(16px);
+            @include box_flex;
+            @include align;
+            @include justify;
+        }
+        .list {
+            width: 100%;
+            // background: #F6F4F5;
+            .bot {
+                width: 100%;
+                @include box_flex;
+                flex-wrap: wrap;
+                dl {
+                    width: 50%;
+                    background: #fff;
+                    dt {
+                        width: 100%;
+                        height: 70%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            padding: pxTorem(5px);
+                        }
+                    }
+                    dd {
+                        width: 100%;
+                        li {
+                            width: 100%;
+                            height: pxTorem(20px);
+                            @include box_flex;
+                            @include justify(space-between);
+                            padding: 0 pxTorem(15px);
+                            span {
+                                color: rgb(134, 127, 127);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @include num(100%, pxTorem(44px));
+    #{$bg}: pink
+}
