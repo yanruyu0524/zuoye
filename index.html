@@ -14,7 +14,22 @@
 <body>
     <div class="wrap">
         <header></header>
-        <section></section>
+        <section>
+            <div class="banner swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="./img/timg.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/timg.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/timg.jpg" alt="">
+                    </li>
+                </ul>
+                <ol class="swiper-pagination ol"></ol>
+            </div>
+        </section>
         <footer></footer>
     </div>
     <script src='commons/js/jquery.min.js'></script>
@@ -22,6 +37,16 @@
     <script src='commons/js/swiper.min.js'></script>
     <script src='commons/js/better-scroll.js'></script>
     <script src='js/index.js'></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            speed: 1000,
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination"
+            }
+        });
+    </script>
 </body>
 
 </html>
