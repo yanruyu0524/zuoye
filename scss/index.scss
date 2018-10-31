@@ -1,0 +1,31 @@
+@import "common.scss";
+@import "mixin.scss";
+* {
+    @include sizing;
+}
+
+html,
+body,
+.wrap {
+    @include num(100%, 100%);
+}
+
+.wrap {
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    @include num(100%, pxTorem(44px));
+    #{$bg}: pink
+}
+
+section {
+    @include flex;
+    #{$bg}: skyblue;
+}
+
+footer {
+    @include num(100%, pxTorem(44px));
+    #{$bg}: pink
+}
